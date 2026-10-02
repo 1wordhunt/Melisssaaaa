@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<title>Ecrin'e Hediye – Kalp Koşusu</title>
+<title>Melisa Hediye – Kalp Koşusu</title>
 <style>
 html,body{margin:0;height:100%;overflow:hidden;background:#2d1560;color:#fff;font-family:system-ui,'Segoe UI',sans-serif;touch-action:none;user-select:none;-webkit-user-select:none}
 canvas{display:block}
@@ -31,12 +31,12 @@ button{margin-top:22px;padding:14px 40px;font:700 20px system-ui;color:#fff;bord
 </style></head><body>
 <div id="hud" style="display:none"><span id="cnt">♥ 0 / 10</span><div id="bar"><i></i></div></div>
 <div id="flash"></div><div id="tt"></div><div id="mu">🔊</div><canvas id="fx"></canvas>
-<div class="ov" id="start"><h1>Ecrin'e Hediye 🎁</h1><p>10 kalbi topla, sürprizi aç.</p><p style="font-size:14px;opacity:.7">← → şerit değiştir · ↑ zıpla · ↓ kay<br>Telefonda: ekranı kaydır</p><button id="go">Başla</button></div>
+<div class="ov" id="start"><h1>melisaya Hediye 🎁</h1><p>10 kalbi topla, sürprizi aç.</p><p style="font-size:14px;opacity:.7">← → şerit değiştir · ↑ zıpla · ↓ kay<br>Telefonda: ekranı kaydır</p><button id="go">Başla</button></div>
 <div class="ov" id="fin"><div id="msg"></div><button id="tele">✨ Eve ışınlan</button><button id="again">Tekrar oyna</button></div><div id="hh"><button id="hagain">↺</button><button id="act">E</button><div id="hint">WASD yürü · tıkla-sürükle ile bak · E dokun · Telefonda: sol yarı yürü, sağ yarı bak</div></div><div id="warp"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 // ✏️ Final mesajı: buradaki cümleleri kendin değiştirebilirsin
-const MSG=["Ecrin! 🎉","10 kalbi de topladın, helal olsun!","Seninle arkadaş olmak çok güzel.","İyi ki varsın, hep böyle kal. 🌟","Bu oyun küçük bir hediye, umarım sevmişsindir. 🎁"];
+const MSG=["melisa! 🎉","10 kalbi de topladın, helal olsun!","Seninle arkadaş olmak çok güzel.","İyi ki varsın, hep böyle kal. 🌟","Bu oyun küçük bir hediye, umarım sevmişsindir. 🎁"];
 
 const $=i=>document.getElementById(i),L=2.4,rnd=Math.random;
 let state='menu',hearts=0,speed=5,acc=-15,px=0,lane=0,py=0,vy=0,slide=0,inv=0,shake=0,t=0,endT=0,fxOn=0,nm;
@@ -231,8 +231,8 @@ win(-3,1.7,3.88,Math.PI);win(3,1.7,3.88,Math.PI);
 const tvC=document.createElement('canvas');tvC.width=320;tvC.height=180;const tg=tvC.getContext('2d'),tvT=new THREE.CanvasTexture(tvC);
 function tvDraw(){const w=320,h=180,t=tm;tg.textAlign='left';
 if(ch==0){const q=tg.createLinearGradient(0,0,w,h);q.addColorStop(0,'#ff5fa2');q.addColorStop(1,'#5a2ca0');tg.fillStyle=q;tg.fillRect(0,0,w,h);for(let i=0;i<9;i++){tg.font=(18+i*4)+'px serif';tg.fillStyle='#ffffff99';tg.fillText('♥',(i*47+t*30)%w,h-((t*40+i*37)%h))}tg.textAlign='center';tg.fillStyle='#fff';tg.font='italic 700 48px Georgia';tg.fillText('Ecrin ♥',w/2,h/2+10);tg.font='16px system-ui';tg.fillText('iyi ki varsın!',w/2,h/2+38)}
-else if(ch==1){tg.fillStyle='#07051a';tg.fillRect(0,0,w,h);tg.fillStyle='#fff';for(let i=0;i<50;i++)tg.fillRect((i*67+t*(10+i%5*8))%w,(i*29)%h,2,2);tg.textAlign='center';tg.fillStyle='#ffd1e6';tg.font='700 28px Georgia';tg.fillText('10 / 10 ♥',w/2,h/2);tg.font='15px system-ui';tg.fillText('Şampiyon Ecrin 🏆',w/2,h/2+30)}
-else{['#fff','#ff0','#0ff','#0f0','#f0f','#f00','#00f'].forEach((c,i)=>{tg.fillStyle=c;tg.fillRect(i*w/7,0,w/7+1,h*.75)});tg.fillStyle='#111';tg.fillRect(0,h*.75,w,h*.25);tg.fillStyle='#fff';tg.textAlign='center';tg.font='700 18px system-ui';tg.fillText('📺 Ecrin TV · CANLI',w/2,h*.9)}
+else if(ch==1){tg.fillStyle='#07051a';tg.fillRect(0,0,w,h);tg.fillStyle='#fff';for(let i=0;i<50;i++)tg.fillRect((i*67+t*(10+i%5*8))%w,(i*29)%h,2,2);tg.textAlign='center';tg.fillStyle='#ffd1e6';tg.font='700 28px Georgia';tg.fillText('10 / 10 ♥',w/2,h/2);tg.font='15px system-ui';tg.fillText('Şampiyon melisa 🏆',w/2,h/2+30)}
+else{['#fff','#ff0','#0ff','#0f0','#f0f','#f00','#00f'].forEach((c,i)=>{tg.fillStyle=c;tg.fillRect(i*w/7,0,w/7+1,h*.75)});tg.fillStyle='#111';tg.fillRect(0,h*.75,w,h*.25);tg.fillStyle='#fff';tg.textAlign='center';tg.font='700 18px system-ui';tg.fillText('📺 Melisa TV · CANLI',w/2,h*.9)}
 tvT.needsUpdate=true}
 bx(2.6,.55,.5,0x4a3426,-3,.28,-3.65,1);bx(1.95,1.12,.07,0x0b0b10,-3,1.3,-3.82,0);
 const scr=new THREE.Mesh(new THREE.PlaneGeometry(1.85,1.04),new THREE.MeshBasicMaterial({map:tvT,toneMapped:false}));scr.position.set(-3,1.3,-3.77);H.add(scr);
